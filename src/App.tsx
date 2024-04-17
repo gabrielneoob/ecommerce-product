@@ -32,8 +32,8 @@ const App = () => {
             setOpenProductModal={setOpenProductModal}
           />
           <ProductDetails />
-          <Footer />
         </div>
+        <Footer />
       </Container>
     </div>
   );
