@@ -9,7 +9,7 @@ const ProductDetails = () => {
   const { setItemCart, deleteItemCart } = useCart();
 
   return (
-    <div className="p-14 flex-1 flex flex-col gap-7 max-w-xl">
+    <div className="p-14 flex-1 flex flex-col gap-7 max-w-xl sm:pt-2">
       <p className="text-orange font-semibold tracking-wider text-sm">
         SNEAKER COMPANY
       </p>
