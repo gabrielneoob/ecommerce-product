@@ -13,7 +13,7 @@ const Product = ({ openProductModal, setOpenProductModal }: ProductProps) => {
   return (
     <div className=" px-7" style={{ flex: "0.4" }}>
       <div
-        className="size-96 mb-7 sm:h-auto relative"
+        className="size-96 mb-7 sm:h-auto sm:relative"
         onClick={() => {
           if (windowSize.width > 850) {
             setOpenProductModal(true);
