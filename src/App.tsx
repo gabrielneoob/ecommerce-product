@@ -4,6 +4,7 @@ import Header from "./components/header/header.component";
 import ProductDetails from "./components/product-details/product-details";
 import Product from "./components/product/product.component";
 import ProductModal from "./components/product-modal/product-modal.component";
+import Footer from "./components/footer/footer.component";
 // import { useWindowSize } from "./hooks/useWindowSize";
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
             setOpenProductModal={setOpenProductModal}
           />
           <ProductDetails />
+          <Footer />
         </div>
       </Container>
     </div>

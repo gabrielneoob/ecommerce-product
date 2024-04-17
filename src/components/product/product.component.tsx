@@ -11,9 +11,12 @@ const Product = ({ openProductModal, setOpenProductModal }: ProductProps) => {
   const { windowSize } = useWindowSize();
 
   return (
-    <div className=" px-7" style={{ flex: "0.4" }}>
+    <div
+      className=" px-7 sm:flex sm:max-w-xl sm:w-full sm:justify-center"
+      style={{ flex: "0.4" }}
+    >
       <div
-        className="size-96 mb-7 sm:h-auto sm:relative"
+        className="size-96 mb-7 sm:h-auto sm:relative sm:size-80 sm:w-full"
         onClick={() => {
           if (windowSize.width > 850) {
             setOpenProductModal(true);
@@ -22,11 +25,19 @@ const Product = ({ openProductModal, setOpenProductModal }: ProductProps) => {
       >
         {windowSize.width < 850 && (
           <div
-            className="size-10 rounded-full bg-light-grayish-blue absolute left-3 top-44 flex items-center justify-center cursor-pointer"
+            className="size-10 rounded-full bg-light-grayish-blue absolute sm:left-3 sm:top-56 flex items-center justify-center cursor-pointer"
             onClick={() => {
               if (productIndex > 0) {
                 setProductIndex((previous) => previous - 1);
               }
+            }}
+            style={{
+              top:
+                windowSize.width < 851 && windowSize.width > 500
+                  ? "14rem"
+                  : windowSize.width < 500 && windowSize.width > 350
+                  ? "10rem"
+                  : "6rem",
             }}
           >
             <img src={leftArrow} alt="" />
@@ -39,7 +50,15 @@ const Product = ({ openProductModal, setOpenProductModal }: ProductProps) => {
         />
         {windowSize.width < 850 && (
           <div
-            className="size-10 rounded-full bg-light-grayish-blue absolute right-3 top-44 flex items-center justify-center cursor-pointer"
+            className="size-10 rounded-full bg-light-grayish-blue absolute sm:right-3 sm:top-56 flex items-center justify-center cursor-pointer"
+            style={{
+              top:
+                windowSize.width < 851 && windowSize.width > 500
+                  ? "14rem"
+                  : windowSize.width < 500 && windowSize.width > 350
+                  ? "10rem"
+                  : "6rem",
+            }}
             onClick={() => {
               if (productIndex < 3) {
                 setProductIndex((previous) => previous + 1);
